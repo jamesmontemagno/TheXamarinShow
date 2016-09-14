@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="14">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="4" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="117" width="600" height="483"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="304" y="80" width="276" height="30"/>
+                                <state key="normal" title="Drop Pin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MyButtonPin_TouchUpInside:" destination="BYZ-38-t0r" id="7" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="80" width="276" height="30"/>
+                                <state key="normal" title="Load Data">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="78" firstItem="4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53"/>
+                            <constraint id="79" firstItem="4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading"/>
+                            <constraint id="80" firstItem="4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing"/>
+                            <constraint id="81" firstItem="4" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom"/>
+                            <constraint id="89" firstItem="5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16"/>
+                            <constraint id="90" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="20"/>
+                            <constraint id="91" firstItem="4" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="7"/>
+                            <constraint id="92" firstItem="5" firstAttribute="leading" secondItem="4" secondAttribute="centerX" constant="4"/>
+                            <constraint id="93" firstItem="6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16"/>
+                            <constraint id="94" firstItem="6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="95" firstItem="4" firstAttribute="top" secondItem="6" secondAttribute="bottom" constant="7"/>
+                            <constraint id="96" firstItem="4" firstAttribute="centerX" secondItem="6" secondAttribute="trailing" constant="4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyMap" destination="4" id="name-outlet-4"/>
+                        <outlet property="MyButtonPin" destination="5" id="name-outlet-5"/>
+                        <outlet property="MyButtonLoadData" destination="6" id="name-outlet-6"/>
+                    </connections>
+                    <navigationItem title="Coffee App" id="62" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <scene sceneID="13">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="14" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="17">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="63" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-665" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
