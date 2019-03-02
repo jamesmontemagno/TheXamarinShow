@@ -4,3 +4,5 @@
 
 
 Here you will find links to show notes and source code from the show.
+
+Additionally, you can open a new Issue to request specific topics you would like to see covered!
